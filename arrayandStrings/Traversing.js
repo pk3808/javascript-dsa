@@ -33,3 +33,33 @@ function duplicateEvenNumber(arrd) {
 
 }
 console.log(duplicateEvenNumber(arr));
+
+// reversing string using reverse traversal
+let str = "i live in a house "
+function reverseString(str) {
+  let result = ''
+  let i = str.length -1
+  while (i>=0) {
+    while (i>=0 && str[i]===' ') {
+      i-- 
+    }
+    if (i<0) {
+      break
+    }
+    let end = i
+    while (i>=0 && str[i]!=" "){
+      i--
+
+    }
+    let start = i +1
+            if (result.length > 0) {
+            result += " ";
+        }
+
+    result += str.substring(start ,end +1)
+    
+  }
+  return result
+}
+console.log(reverseString(str));
+
